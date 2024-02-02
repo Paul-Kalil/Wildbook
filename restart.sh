@@ -1,0 +1,2 @@
+./mavenBuild.sh
+./copyBuild.sh

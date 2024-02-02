@@ -227,8 +227,9 @@ finally{
 	                      }
 	                      else{
 	                      %>
-
-	                      	<li><a href="<%=urlLoc %>/welcome.jsp" title=""><%=props.getProperty("login") %></a></li>
+                          <li><a href="<%=urlLoc %>/welcome.jsp" title=""><%=props.getProperty("login") %></a></li>
+	                      	<li><a href="http://localhost:3000" title=""><%=props.getProperty("login") %></a></li>
+                          <li><a href="<%= request.getContextPath() %>/react/" title=""><%= props.getProperty("login") %></a></li>
 
 	                      <%
 	                      }

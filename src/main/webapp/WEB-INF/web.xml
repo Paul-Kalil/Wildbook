@@ -2822,4 +2822,14 @@
     <url-pattern>/EncounterRemoveAnnotation</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>ReactAppServlet</servlet-name>
+    <servlet-class>org.ecocean.servlet.ReactAppServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>ReactAppServlet</servlet-name>
+      <url-pattern>/frontend/*</url-pattern>
+  </servlet-mapping>
+
 </web-app>
