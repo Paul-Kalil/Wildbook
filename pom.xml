@@ -762,129 +762,7 @@
 
 	
     <plugins>
-	<!--
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-clean-plugin</artifactId>
-        <version>2.4.1</version>
-        <configuration>
-          <filesets>
-            <fileset>
-              <directory>shepherd_derby_database</directory>
-              <includes>
-                <include>**/*</include>
-              </includes>
-              <followSymlinks>false</followSymlinks>
-            </fileset>
-            <fileset>
-              <directory>webapps</directory>
-              <includes>
-                <include>**/*</include>
-              </includes>
-              <followSymlinks>false</followSymlinks>
-            </fileset>
-            <fileset>
-              <directory>${basedir}</directory>
-              <includes>
-                <include>derby.log</include>
-                <include>shepherd_derby_database</include>
-                <include>webapps</include>
-              </includes>
-              <followSymlinks>false</followSymlinks>
-            </fileset>
-          </filesets>
-        </configuration>
-      </plugin>
-	  -->
-<!--
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.8</version>
-        <configuration>
-          <reportOutputDirectory>${project.basedir}/target/${project.artifactId}-${project.version}</reportOutputDirectory>
-          <destDir>javadoc</destDir>
-          <show>private</show>
-        </configuration>
-
-        <executions>
-          <execution>
-            <phase>install</phase>
-            <goals>
-			
-              <goal>javadoc</goal>
-			
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-	  -->
-
-	  <!--
-      <plugin>
-        <groupId>org.mortbay.jetty</groupId>
-        <artifactId>maven-jetty-plugin</artifactId>
-        <version>6.1.25</version>
-        <configuration>
-
-          <additionalClasspathElements>
-            <additionalClasspathElement>${project.build.outputDirectory}</additionalClasspathElement>
-          </additionalClasspathElements>
-
- 
-
-          <connectors>
-            <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-              <port>8080</port>
-              <maxIdleTime>60000</maxIdleTime>
-            </connector>
-          </connectors>
-          <stopKey>Foo-Shepherd</stopKey>
-          <stopPort>8082</stopPort>
-        </configuration>
-
-        <executions>
-          <execution>
-            <id>start-jetty</id>
-            <phase>pre-integration-test</phase>
-            <goals>
-              <goal>run</goal>
-            </goals>
-            <configuration>
-              <connectors>
-                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-                  <port>9090</port>
-                  <maxIdleTime>60000</maxIdleTime>
-                </connector>
-              </connectors>
-              <daemon>true</daemon>
-              <stopKey>Foo-Shepherd</stopKey>
-              <stopPort>9092</stopPort>
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>stop-jetty</id>
-            <phase>post-integration-test</phase>
-            <goals>
-              <goal>stop</goal>
-            </goals>
-            <configuration>
-              <connectors>
-                <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-                  <port>9090</port>
-                  <maxIdleTime>60000</maxIdleTime>
-                </connector>
-              </connectors>
-              <daemon>true</daemon>
-              <stopKey>Foo-Shepherd</stopKey>
-              <stopPort>9092</stopPort>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-	  -->
-
+	
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -943,21 +821,6 @@
         </executions>
       </plugin>
 
-	  <!--
-      <plugin>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <version>2.6</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>integration-test</goal>
-              <goal>verify</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-	  -->
-
 	<plugin>
 	<groupId>org.apache.tomcat.maven</groupId>  
  	<artifactId>tomcat7-maven-plugin</artifactId>  
@@ -966,7 +829,7 @@
   	<url>http://localhost:8080/manager/text</url>  
   	<server>TomcatServer</server>    
   	<username>admin</username>  
-  	<password></password>   
+  	<password></password>
  	</configuration>
 	</plugin>
 
@@ -989,6 +852,13 @@
                     </goals>
                 </execution>
             </executions>
+        </plugin>
+        <plugin>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.2</version>
+            <configuration>
+                <packagingExcludes>WEB-INF/web.xml</packagingExcludes>
+            </configuration>
         </plugin>
     </plugins>
   </build>
