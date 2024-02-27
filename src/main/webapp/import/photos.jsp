@@ -108,9 +108,9 @@ div.file-item div {
 
 
 <h1 class="import-header">Bulk Import: Photo Upload</h1>
-<p class="import-explanation">On your computer, organize the photos you'd like to upload into a single folder. Remember, the image names must correspond exactly to the "Encounter.MediaAsset" entries in your Wildbook Standard Format spreadsheet.</p>
+<p class="import-explanation">On your computer, organize the photos you'd like to upload into a single folder. Remember, the image names must correspond exactly to the "Encounter.MediaAsset" entries in your Wild North Wildbook Standard Format spreadsheet.</p>
 
-<p class="import-explanation">Using the tool below, upload your image folder to our server. Your images will be stored in your private directory until the import is complete.</p>
+<p class="import-explanation">Using the tool below, upload your images to our server. Your images will be stored in your private directory until the import is complete.</p>
 
 <p class="import-explanation"> Your photos are saved in a private directory on our server. You can upload photos in multiple sessions, and your excel file has access to any of the photos you have uploaded in the past (visible on the <a href="reviewDirectory.jsp">photo review page</a>).
 </p>
