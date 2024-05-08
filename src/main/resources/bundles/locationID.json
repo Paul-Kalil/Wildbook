@@ -1,14 +1,25 @@
 {
   "description": "Hierarchical Encounter.locationID list in Wildbook",
-  "source": "http://en.wikipedia.org/wiki/List_of_seas",
+  "source": "Maps",
   "locationID": [
 
 	{"name":"Africa - All","id":"Africa","locationID":[
 
 		{"name":"Africa - South","id":"Africa - South","locationID":[
 		
+			{"name":"Botswana","id":"Botswana","locationID":[]}
+
+			{"name":"Eswatini","id":"Eswatini","locationID":[]}
+
+			{"name":"Botswana","id":"Botswana","locationID":[]}
+
+			{"name":"Botswana","id":"Botswana","locationID":[]}
+
+			{"name":"Botswana","id":"Botswana","locationID":[]}
+
+			{"name":"Botswana","id":"Botswana","locationID":[]}
+
 			{"name":"Great Limpopo TFCA","id":"Great Limpopo TFCA","locationID":[]}
-		
 		]},
 
 		{"name":"Africa - East","id":"Africa - East","locationID":[]},
